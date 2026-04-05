@@ -6,45 +6,16 @@ const css = `
     transform: translateY(-6px);
     box-shadow: 0 16px 36px rgba(90,122,90,0.18) !important;
   }
-  .skill-bar-fill {
-    height: 6px;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent1), var(--accent2));
-    margin-top: 6px;
-    transition: width 0.6s ease;
-  }
 `;
 
 const SKILLS = [
-  {
-    category: "Frontend Development",
-    icon: "🖥️",
-    items: [
-      { name: "HTML",       level: 90 },
-      { name: "CSS",        level: 85 },
-      { name: "JavaScript", level: 80 },
-      { name: "React.js",   level: 75 },
-    ],
-  },
-  {
-    category: "Backend & APIs",
-    icon: "⚙️",
-    items: [
-      { name: "Node.js",    level: 70 },
-      { name: "Express.js", level: 87 },
-      { name: "MongoDB",    level: 89 },
-    ],
-  },
-  {
-    category: "Tools & Others",
-    icon: "🛠️",
-    items: [
-      { name: "Git",    level: 80 },
-      { name: "GitHub", level: 100 },
-      { name: "Figma",  level: 100 },
-      { name: "Vite",   level: 75 },
-    ],
-  },
+{ name: "HTML", desc: "I use HTML to build the basic structure of web pages." },
+{ name: "CSS", desc: "I style websites using CSS to make them look clean and responsive." },
+{ name: "JavaScript", desc: "I use JavaScript to add interactivity and make websites dynamic." },
+{ name: "React", desc: "I build user interfaces using React and its features like hooks and state." },
+{ name: "Vite", desc: "I use Vite to run and build projects faster during development." },
+{ name: "PHP", desc: "I use PHP to handle backend logic and connect to databases." },
+{ name: "MongoDB", desc: "I use MongoDB to store and manage data for web applications." },
 ];
 
 export default function Experience() {
@@ -52,35 +23,26 @@ export default function Experience() {
     <section id="experience" style={{ padding: "60px 0" }}>
       <style>{css}</style>
 
-      <h2 style={{ margin: "0 0 8px", fontSize: 50, textAlign: "center" }}>Skills & Tech Stack</h2>
-      <p style={{ color: "var(--muted)", margin: "0 0 36px", textAlign: "center", fontSize: 25 }}>
+      <h2 style={{ margin: "0 0 8px", fontSize: 50, textAlign: "center" }}>My Technical Skills</h2>
+      <p style={{ color: "var(--muted)", margin: "0 0 36px", textAlign: "center", fontSize: 18 }}>
         A comprehensive overview of my technical skills and proficiency.
       </p>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 16 }}>
-        {SKILLS.map((group, i) => (
-          <div key={i} className="skill-card" style={{ padding: 50, borderRadius: 14, border: "1px solid var(--border)", background: "var(--panel)", boxShadow: "var(--shadow)" }}>
-
-            {}
-            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-              <span style={{ fontSize: 35 }}>{group.icon}</span>
-              <h3 style={{ margin: 0, fontSize: 30, fontWeight: 700 }}>{group.category}</h3>
-            </div>
-
-            {}
-            {group.items.map((skill, j) => (
-              <div key={j} style={{ marginBottom: 16 }}>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: 20 }}>
-                  <span style={{ color: "var(--text)", fontWeight: 500 }}>{skill.name}</span>
-                  <span style={{ color: "var(--muted)", fontSize: 20 }}>{skill.level}%</span>
-                </div>
-                {}
-                <div style={{ height: 6, borderRadius: 999, background: "var(--accent-light)", marginTop: 6 }}>
-                  <div className="skill-bar-fill" style={{ width: skill.level + "%" }} />
-                </div>
-              </div>
-            ))}
-
+      <div style={{ display: "flex", flexDirection: "column", gap: 16, maxWidth: 700, margin: "0 auto" }}>
+        {SKILLS.map((skill, i) => (
+          <div key={i} className="skill-card" style={{
+            padding: "24px 32px",
+            borderRadius: 14,
+            border: "1px solid var(--border)",
+            background: "var(--panel)",
+            boxShadow: "var(--shadow)"
+          }}>
+            <h3 style={{ margin: "0 0 8px", fontSize: 18, fontWeight: 700 }}>
+              {skill.icon} {skill.name}
+            </h3>
+            <p style={{ margin: 0, color: "var(--muted)", fontSize: 14, lineHeight: 1.7 }}>
+              {skill.desc}
+            </p>
           </div>
         ))}
       </div>
