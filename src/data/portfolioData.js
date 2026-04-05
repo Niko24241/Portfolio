@@ -61,10 +61,4 @@ export const CONTACT = [
     href: "https://awesometodosapp-smoa.onrender.com/",
     icon: "🎨",
   },
-  {
-    label: "Download Resume",
-    value: "View PDF",
-    href: "#",
-    icon: "📄",
-  },
 ];
