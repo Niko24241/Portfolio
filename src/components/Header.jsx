@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const links = ["home", "projects", "experience", "contact"];
+const links = ["Home", "Projects", "Skills", "Contact"];
 
 export default function Header({ dark, setDark, active }) {
   const [open, setOpen] = useState(false);
