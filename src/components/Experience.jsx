@@ -16,6 +16,9 @@ const SKILLS = [
 { name: "Vite", desc: "I use Vite to run and build projects faster during development." },
 { name: "PHP", desc: "I use PHP to handle backend logic and connect to databases." },
 { name: "MongoDB", desc: "I use MongoDB to store and manage data for web applications." },
+{ name: "Figma", desc: "I use Figma to design UI and plan how websites will look." },
+{ name: "GitHub", desc: "I use GitHub to store my code and track changes in my projects." },
+{ name: "Node.js", desc: "I use Node.js to build backend apps and handle server-side code." },
 ];
 
 export default function Experience() {
