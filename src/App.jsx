@@ -24,7 +24,7 @@ export default function App() {
       (entries) => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }),
       { threshold: 0.4 }
     );
-    ["home", "projects", "experience", "contact"].forEach(id => {
+    ["Home", "Projects", "Skills", "Contact"].forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
