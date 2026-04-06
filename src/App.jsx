@@ -24,7 +24,7 @@ export default function App() {
       (entries) => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); }),
       { threshold: 0.4 }
     );
-    ["Home", "Projects", "Skills", "Contact"].forEach(id => {
+    ["home", "projects", "skills", "contact"].forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -43,10 +43,10 @@ export default function App() {
       <Header dark={dark} setDark={setDark} active={active} />
 
       <main style={{ maxWidth: "100%", padding: "0 60px" }}>
-      <section id="Home"><Hero /></section>
-      <section id="Projects"><Projects /></section>
-      <section id="Skills"><Skills /></section>
-      <section id="Contact"><Contact /></section>
+      <section id="home"><Hero /></section>
+      <section id="projects"><Projects /></section>
+      <section id="skills"><Skills /></section>
+      <section id="contact"><Contact /></section>
       </main>
 
       <Footer />
