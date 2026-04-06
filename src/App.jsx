@@ -43,10 +43,10 @@ export default function App() {
       <Header dark={dark} setDark={setDark} active={active} />
 
       <main style={{ maxWidth: "100%", padding: "0 60px" }}>
-        <Hero />
-        <Projects />
-        <Experience />
-        <Contact />
+      <section id="Home"><Hero /></section>
+      <section id="Projects"><Projects /></section>
+      <section id="Skills"><Skills /></section>
+      <section id="Contact"><Contact /></section>
       </main>
 
       <Footer />
