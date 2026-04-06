@@ -21,9 +21,9 @@ const SKILLS = [
 { name: "Node.js", desc: "I use Node.js to build backend apps and handle server-side code." },
 ];
 
-export default function Experience() {
+export default function skills() {
   return (
-    <section id="experience" style={{ padding: "60px 0" }}>
+    <section id="skills" style={{ padding: "60px 0" }}>
       <style>{css}</style>
 
       <h2 style={{ margin: "0 0 8px", fontSize: 50, textAlign: "center" }}>My Technical Skills</h2>
